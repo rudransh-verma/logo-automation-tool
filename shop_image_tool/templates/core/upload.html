@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Upload Images for Processing</title>
+</head>
+<body>
+    <h1>Upload Product Images & Excel</h1>
+
+    <form method="POST" enctype="multipart/form-data">
+        {% csrf_token %}
+        <label>Select Excel File:</label><br>
+        <input type="file" name="excel"><br><br>
+
+        <label>Select Product Images (ZIP):</label><br>
+        <input type="file" name="images_zip"><br><br>
+
+        <label>Select Manufacturer:</label><br>
+        <select name="manufacturer">
+            <option value="">Select...</option>
+
+        </select><br><br>
+
+        <input type="submit" value="Process">
+    </form>
+</body>
+</html>
